@@ -1,6 +1,6 @@
 "use client";
 
-import { Book, Utensils, Users, Menu } from "lucide-react";
+import { Book, Utensils, Users, Menu, Info } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 import {
   DropdownMenu,
@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 const navLinks = [
   { label: "My Timetable", id: "timetable" },
@@ -54,6 +55,20 @@ export function Header() {
         </nav>
 
         <div className="flex-1 flex justify-end items-center gap-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Info className="h-5 w-5" />
+                  <span className="sr-only">Hint</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Got a classic gamer code up your sleeve?</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
