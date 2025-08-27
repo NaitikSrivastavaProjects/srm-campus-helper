@@ -5,6 +5,7 @@ import { Header } from "@/components/campus-connect/Header";
 import { InteractiveMapCard } from "@/components/campus-connect/InteractiveMapCard";
 import { KonamiListener } from "@/components/campus-connect/KonamiListener";
 import { ResourcesCard } from "@/components/campus-connect/ResourcesCard";
+import { SrmHeader } from "@/components/campus-connect/SrmHeader";
 import { TimetableCard } from "@/components/campus-connect/TimetableCard";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       <KonamiListener />
       <Header />
       <main className="flex-grow p-4 sm:p-6 lg:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        <SrmHeader />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start mt-6">
           <div className="lg:col-span-2 flex flex-col gap-6">
             <TimetableCard />
             <InteractiveMapCard />
