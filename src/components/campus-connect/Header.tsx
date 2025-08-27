@@ -1,3 +1,5 @@
+"use client";
+
 import { Book, Utensils, Users, Menu } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 import {
@@ -16,7 +18,7 @@ const navLinks = [
 ];
 
 export function Header() {
-  const handleScroll = (e: React.MouseEvent<HTMLDivElement>, id: string) => {
+  const handleScroll = (e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
@@ -61,7 +63,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {navLinks.map((link) => (
-                <DropdownMenuItem key={link.id} onClick={(e) => handleScroll(e, link.id)}>
+                <DropdownMenuItem key={link.id} onClick={(e: any) => handleScroll(e, link.id)}>
                   {link.label}
                 </DropdownMenuItem>
               ))}
