@@ -9,7 +9,7 @@ import {
 import { MapPin } from "lucide-react";
 
 const locations = [
-  { name: "Tech Park", img: "/tech-park.png", hint: "tech park" },
+  { name: "Tech Park", img: "https://picsum.photos/400/300?random=1", hint: "tech park" },
   { name: "Canteen", img: "https://picsum.photos/400/300?random=2", hint: "food court" },
   { name: "Hostel", img: "https://picsum.photos/400/300?random=3", hint: "dorm room" },
   { name: "University Building", img: "https://picsum.photos/400/300?random=4", hint: "university campus" },
