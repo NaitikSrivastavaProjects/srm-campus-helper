@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Library, UtensilsCrossed, Users, GraduationCap } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
 
 export function Header() {
   return (
@@ -11,20 +12,23 @@ export function Header() {
             CampusConnect
           </h1>
         </div>
-        <nav className="hidden md:flex items-center gap-2">
-          <Button variant="ghost">
-            <UtensilsCrossed className="mr-2 h-4 w-4" />
-            Canteens
-          </Button>
-          <Button variant="ghost">
-            <Library className="mr-2 h-4 w-4" />
-            Libraries
-          </Button>
-          <Button variant="ghost">
-            <Users className="mr-2 h-4 w-4" />
-            Clubs
-          </Button>
-        </nav>
+        <div className="flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-2">
+            <Button variant="ghost">
+              <UtensilsCrossed className="mr-2 h-4 w-4" />
+              Canteens
+            </Button>
+            <Button variant="ghost">
+              <Library className="mr-2 h-4 w-4" />
+              Libraries
+            </Button>
+            <Button variant="ghost">
+              <Users className="mr-2 h-4 w-4" />
+              Clubs
+            </Button>
+          </nav>
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );
