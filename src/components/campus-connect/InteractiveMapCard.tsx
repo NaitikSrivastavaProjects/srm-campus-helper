@@ -11,7 +11,7 @@ import { MapPin } from "lucide-react";
 const locations = [
   { name: "Tech Park", img: "https://thedriftingfocus.wordpress.com/wp-content/uploads/2012/12/imag01031.jpg?w=1024&h=548", hint: "tech park" },
   { name: "Canteen", img: "https://www.thecontractchair.co.uk/media/ck_uploads/from_tiny_editor/canteen-furniture-contract-chair-co-04.webp", hint: "food court" },
-  { name: "Hostel", img: "https://picsum.photos/400/300?random=3", hint: "dorm room" },
+  { name: "Hostel", img: "https://srmeaswari.ac.in/wp-content/uploads/2024/07/Boys_Hostel-768x512-1.webp", hint: "hostel building" },
   { name: "University Building", img: "https://picsum.photos/400/300?random=4", hint: "university campus" },
 ];
 
@@ -33,7 +33,7 @@ export function InteractiveMapCard() {
                 alt={loc.name}
                 width={400}
                 height={300}
-                className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                className="w-full h-56 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                 data-ai-hint={loc.hint}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
