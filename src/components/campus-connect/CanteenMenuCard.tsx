@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Table,
   TableBody,
@@ -40,22 +41,24 @@ export function CanteenMenuCard() {
         <CardDescription>Today's menu from the main canteen.</CardDescription>
       </CardHeader>
       <CardContent>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>Item</TableHead>
-              <TableHead className="text-right">Price</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {menuItems.map((menu) => (
-              <TableRow key={menu.item}>
-                <TableCell className="font-medium">{menu.item}</TableCell>
-                <TableCell className="text-right">{menu.price}</TableCell>
+        <ScrollArea className="h-[240px]">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Item</TableHead>
+                <TableHead className="text-right">Price</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {menuItems.map((menu) => (
+                <TableRow key={menu.item}>
+                  <TableCell className="font-medium">{menu.item}</TableCell>
+                  <TableCell className="text-right">{menu.price}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </ScrollArea>
       </CardContent>
     </Card>
   );
