@@ -16,7 +16,7 @@ const announcements = [
   },
   {
     title: "Geeks For Geeks Recruitments Update",
-    date: "4 days ago",
+    date: "1 day ago",
     content: "The GFG recruitments are currently going on and task allotment presentation has been sent to the students on their respective student email id's. The last of submission is August 31",
   },
   {
