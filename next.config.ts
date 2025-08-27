@@ -40,6 +40,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'lirp.cdn-website.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
