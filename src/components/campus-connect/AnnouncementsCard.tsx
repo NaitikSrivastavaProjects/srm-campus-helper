@@ -15,9 +15,9 @@ const announcements = [
     content: "The schedule for the upcoming mid-term examinations has been published. Please check the student portal.",
   },
   {
-    title: "Annual Sports Fest 'Ignite' Registration Open",
+    title: "Geeks For Geeks Recruitments Update",
     date: "4 days ago",
-    content: "Registrations for all sporting events under Ignite 2024 are now open. Last date to register is Oct 15.",
+    content: "The GFG recruitments are currently going on and task allotment presentation has been sent to the students on their respective student email id's. The last of submission is August 31",
   },
   {
     title: "Library Renovation Update",
