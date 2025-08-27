@@ -19,9 +19,7 @@ export function EventTimerCard() {
   } | null>(null);
 
   useEffect(() => {
-    const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + 14);
-    eventDate.setHours(10, 0, 0, 0);
+    const eventDate = new Date("2024-09-09T18:00:00");
 
     const calculateTimeLeft = () => {
       const difference = +eventDate - +new Date();
@@ -79,8 +77,11 @@ export function EventTimerCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="font-headline">GFG Orientation</CardTitle>
-        <CardDescription>Event starts in...</CardDescription>
+        <div className="flex justify-between items-baseline">
+          <CardTitle className="font-headline">GFG Orientation</CardTitle>
+          <span className="text-xs text-muted-foreground">(Ending on 9th September)</span>
+        </div>
+        <CardDescription>Event ends in...</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex justify-around items-center text-center font-mono">
