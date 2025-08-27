@@ -13,11 +13,6 @@ export default function Home() {
       <KonamiListener />
       <Header />
       <main className="flex-grow p-4 sm:p-6 lg:p-8">
-        <div className="text-center mb-8">
-          <p className="text-muted-foreground text-lg">
-            Your modern university companion at SRMIST, KTR Campus.
-          </p>
-        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start mt-6">
           <div className="lg:col-span-2 flex flex-col gap-6">
             <TimetableCard />
