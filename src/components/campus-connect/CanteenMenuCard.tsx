@@ -17,17 +17,17 @@ import {
 import { Utensils } from "lucide-react";
 
 const menuItems = [
-  { item: "Masala Dosa", price: "₹60" },
-  { item: "Samosa (2 pcs)", price: "₹30" },
-  { item: "Veg Fried Rice", price: "₹80" },
-  { item: "Coffee", price: "₹25" },
-  { item: "Veg Thali", price: "₹120" },
-  { item: "Idli", price: "₹40" },
-  { item: "Plain Dosa", price: "₹50" },
-  { item: "Uttapam", price: "₹70" },
-  { item: "Tea", price: "₹20" },
-  { item: "Paneer Tikka", price: "₹100" },
-  { item: "Veg Sandwich", price: "₹50" },
+  { item: "Masala Dosa", price: "Rs 60" },
+  { item: "Samosa (2 pcs)", price: "Rs 30" },
+  { item: "Veg Fried Rice", price: "Rs 80" },
+  { item: "Coffee", price: "Rs 25" },
+  { item: "Veg Thali", price: "Rs 120" },
+  { item: "Idli", price: "Rs 40" },
+  { item: "Plain Dosa", price: "Rs 50" },
+  { item: "Uttapam", price: "Rs 70" },
+  { item: "Tea", price: "Rs 20" },
+  { item: "Paneer Tikka", price: "Rs 100" },
+  { item: "Veg Sandwich", price: "Rs 50" },
 ];
 
 export function CanteenMenuCard() {
