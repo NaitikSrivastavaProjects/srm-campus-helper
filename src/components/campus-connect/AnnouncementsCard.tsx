@@ -20,9 +20,9 @@ const announcements = [
     content: "The GFG recruitments are currently going on and task allotment presentation has been sent to the students on their respective student email id's. The last of submission is August 31",
   },
   {
-    title: "Library Renovation Update",
-    date: "1 week ago",
-    content: "The west wing of the central library will be closed for renovation from Oct 10 to Oct 20.",
+    title: "Ganesh Chaturthi - 27 Aug 2025",
+    date: "Upcoming",
+    content: "Puja to be held in the morning in Ganesh Mandir(front of UB). Fest to be held in the afternoon at Vendhar Square at 2:30pm. Students are requested to be present in traditional wear",
   },
 ];
 
