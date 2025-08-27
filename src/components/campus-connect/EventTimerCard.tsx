@@ -34,8 +34,10 @@ export function EventTimerCard() {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     };
     
-    // Set initial time left
-    setTimeLeft(calculateTimeLeft());
+    // Set initial time left on the client-side only
+    if (typeof window !== 'undefined') {
+      setTimeLeft(calculateTimeLeft());
+    }
 
     // Update time left every second
     const timer = setInterval(() => {
