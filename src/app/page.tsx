@@ -35,9 +35,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="text-center p-4 text-muted-foreground text-sm">
-        <p>Made with ❤️ for the students.</p>
-      </footer>
     </div>
   );
 }
