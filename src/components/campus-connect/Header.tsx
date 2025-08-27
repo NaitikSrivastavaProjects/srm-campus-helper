@@ -1,3 +1,4 @@
+import { Book, Utensils, Users } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 
 export function SrmLogo() {
@@ -36,15 +37,28 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
       <div className="container mx-auto flex h-16 items-center px-4">
         <div className="flex-1 flex justify-start">
-            <h1 className="text-2xl font-bold font-headline text-primary">
-                CampusConnect
-            </h1>
+            <div className="flex flex-col">
+              <h1 className="text-2xl font-bold font-headline text-primary">
+                  CampusConnect
+              </h1>
+              <p className="text-xs text-muted-foreground">SRMIST</p>
+            </div>
         </div>
 
-        <div className="flex-1 flex justify-center items-center gap-2">
-            <SrmLogo />
-            <span className="font-semibold text-lg">SRMIST</span>
-        </div>
+        <nav className="flex-1 flex justify-center items-center gap-6">
+            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <Utensils className="h-5 w-5" />
+              <span className="font-medium">Canteens</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <Book className="h-5 w-5" />
+              <span className="font-medium">Libraries</span>
+            </a>
+            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+              <Users className="h-5 w-5" />
+              <span className="font-medium">Clubs</span>
+            </a>
+        </nav>
 
         <div className="flex-1 flex justify-end">
           <ModeToggle />
