@@ -54,7 +54,7 @@ export function Header() {
         </nav>
 
         <div className="flex-1 flex justify-end items-center gap-2">
-          <DropdownMenu>
+          <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu />
