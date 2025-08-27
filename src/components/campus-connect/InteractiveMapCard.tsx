@@ -9,7 +9,7 @@ import {
 import { MapPin } from "lucide-react";
 
 const locations = [
-  { name: "Tech Park", img: "https://picsum.photos/400/300?random=1", hint: "tech park" },
+  { name: "Tech Park", img: "https://thedriftingfocus.wordpress.com/wp-content/uploads/2012/12/imag01031.jpg?w=1024&h=548", hint: "tech park" },
   { name: "Canteen", img: "https://picsum.photos/400/300?random=2", hint: "food court" },
   { name: "Hostel", img: "https://picsum.photos/400/300?random=3", hint: "dorm room" },
   { name: "University Building", img: "https://picsum.photos/400/300?random=4", hint: "university campus" },
@@ -31,8 +31,8 @@ export function InteractiveMapCard() {
               <Image
                 src={loc.img}
                 alt={loc.name}
-                width={400}
-                height={300}
+                width={loc.name === 'Tech Park' ? 1024 : 400}
+                height={loc.name === 'Tech Park' ? 548 : 300}
                 className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                 data-ai-hint={loc.hint}
               />
