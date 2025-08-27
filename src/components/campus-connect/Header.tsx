@@ -13,7 +13,7 @@ import { Button } from "../ui/button";
 const navLinks = [
   { label: "My Timetable", id: "timetable" },
   { label: "Campus Guide", id: "campus-guide" },
-  { label: "Canteen Specials", id: "canteen-specials" },
+  { label: "Canteen Menu", id: "canteen-menu" },
   { label: "Academic Resources", id: "academic-resources" },
 ];
 

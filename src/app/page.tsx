@@ -26,7 +26,7 @@ export default function Home() {
           <div className="lg:col-span-1 flex flex-col gap-6">
             <AnnouncementsCard />
             <EventTimerCard />
-            <div id="canteen-specials">
+            <div id="canteen-menu">
               <CanteenMenuCard />
             </div>
             <div id="academic-resources">

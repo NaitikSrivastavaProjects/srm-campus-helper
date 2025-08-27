@@ -13,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Utensils } from "lucide-react";
 
 const menuItems = [
   { item: "Masala Dosa", price: "₹60" },
@@ -20,13 +21,22 @@ const menuItems = [
   { item: "Veg Fried Rice", price: "₹80" },
   { item: "Coffee", price: "₹25" },
   { item: "Veg Thali", price: "₹120" },
+  { item: "Idli", price: "₹40" },
+  { item: "Plain Dosa", price: "₹50" },
+  { item: "Uttapam", price: "₹70" },
+  { item: "Tea", price: "₹20" },
+  { item: "Paneer Tikka", price: "₹100" },
+  { item: "Veg Sandwich", price: "₹50" },
 ];
 
 export function CanteenMenuCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="font-headline">Canteen Specials</CardTitle>
+        <CardTitle className="font-headline flex items-center gap-2">
+          <Utensils className="h-6 w-6" />
+          Canteen Menu
+        </CardTitle>
         <CardDescription>Today's menu from the main canteen.</CardDescription>
       </CardHeader>
       <CardContent>
