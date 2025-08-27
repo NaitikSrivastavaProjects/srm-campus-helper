@@ -34,12 +34,15 @@ export function EventTimerCard() {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     };
     
+    // Set initial time left
     setTimeLeft(calculateTimeLeft());
 
+    // Update time left every second
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
+    // Cleanup interval on component unmount
     return () => clearInterval(timer);
   }, []);
 
