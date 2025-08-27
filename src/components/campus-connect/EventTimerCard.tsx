@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -8,75 +8,55 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 
 export function EventTimerCard() {
-  const [timeLeft, setTimeLeft] = useState<{
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  } | null>(null);
-
   useEffect(() => {
-    const eventDate = new Date("2024-09-09T18:00:00");
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minsEl = document.getElementById("mins");
+    const secsEl = document.getElementById("secs");
 
-    const calculateTimeLeft = () => {
-      const difference = +eventDate - +new Date();
-      if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        };
+    // Set the target date: September 9, 2025, at 6:00 PM
+    const targetDate = new Date("2025-09-09T18:00:00");
+
+    const updateCountdown = () => {
+      const now = new Date();
+      const difference = +targetDate - +now;
+
+      if (difference <= 0) {
+        if (daysEl) daysEl.innerHTML = "00";
+        if (hoursEl) hoursEl.innerHTML = "00";
+        if (minsEl) minsEl.innerHTML = "00";
+        if (secsEl) secsEl.innerHTML = "00";
+        clearInterval(interval);
+        return;
       }
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-    };
-    
-    // Set initial time left on the client-side only
-    if (typeof window !== 'undefined') {
-      setTimeLeft(calculateTimeLeft());
-    }
 
-    // Update time left every second
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      if (daysEl) daysEl.innerHTML = String(days).padStart(2, "0");
+      if (hoursEl) hoursEl.innerHTML = String(hours).padStart(2, "0");
+      if (minsEl) minsEl.innerHTML = String(minutes).padStart(2, "0");
+      if (secsEl) secsEl.innerHTML = String(seconds).padStart(2, "0");
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+
+    // Initial call to display the timer right away
+    updateCountdown();
 
     // Cleanup interval on component unmount
-    return () => clearInterval(timer);
+    return () => clearInterval(interval);
   }, []);
 
-  const renderUnit = (value: number | undefined, label: string) => (
-    <div className="flex flex-col items-center">
-      <span className="text-3xl font-bold">{value !== undefined ? String(value).padStart(2, "0") : '00'}</span>
-      <span className="text-xs text-muted-foreground">{label}</span>
+  const renderUnit = (id: string, label: string) => (
+    <div className="flex flex-col items-center timer-box">
+      <span id={id} className="text-3xl font-bold">00</span>
+      <p className="text-xs text-muted-foreground">{label}</p>
     </div>
-  );
-
-  const timerComponents = timeLeft ? (
-    <>
-      {renderUnit(timeLeft.days, "DAYS")}
-      <div className="text-3xl font-bold text-muted-foreground">:</div>
-      {renderUnit(timeLeft.hours, "HOURS")}
-      <div className="text-3xl font-bold text-muted-foreground">:</div>
-      {renderUnit(timeLeft.minutes, "MINS")}
-      <div className="text-3xl font-bold text-muted-foreground">:</div>
-      {renderUnit(timeLeft.seconds, "SECS")}
-    </>
-  ) : (
-    <>
-      {[...Array(4)].map((_, i) => (
-        <div key={i} className="flex items-center gap-2">
-          {i > 0 && <div className="text-3xl font-bold text-muted-foreground">:</div>}
-          <div className="flex flex-col items-center gap-1">
-            <Skeleton className="h-8 w-10" />
-            <Skeleton className="h-3 w-8" />
-          </div>
-        </div>
-      ))}
-    </>
   );
 
   return (
@@ -89,8 +69,14 @@ export function EventTimerCard() {
         <CardDescription>Event ends in...</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex justify-around items-center text-center font-mono">
-          {timerComponents}
+        <div className="flex justify-around items-center text-center font-mono countdown-container">
+          {renderUnit("days", "DAYS")}
+          <div className="text-3xl font-bold text-muted-foreground">:</div>
+          {renderUnit("hours", "HOURS")}
+          <div className="text-3xl font-bold text-muted-foreground">:</div>
+          {renderUnit("mins", "MINS")}
+          <div className="text-3xl font-bold text-muted-foreground">:</div>
+          {renderUnit("secs", "SECS")}
         </div>
       </CardContent>
     </Card>
