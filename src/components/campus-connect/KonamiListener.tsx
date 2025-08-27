@@ -10,7 +10,7 @@ export function KonamiListener() {
   const onKonamiCode = useCallback(() => {
     toast({
       title: "✨ Easter Egg Found! ✨",
-      description: "You've unlocked the secrets of CampusConnect!",
+      description: "Pretty easy right.. hello from the developer! Thanks for exploring.",
       duration: 5000,
     });
   }, [toast]);
