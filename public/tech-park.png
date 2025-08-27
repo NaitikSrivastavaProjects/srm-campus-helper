@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1213px" height="682px" viewBox="0 0 1213 682" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+    <title>Group</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1213" height="682"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="Image-by-balram-singh-rawat" transform="translate(0.000000, -0.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <image id="image" mask="url(#mask-2)" x="-114" y="-31" width="1440" height="810" xlink:href="https://firebasestudio.corp.google.com/static/img/sandbox/d04a625b5a7596d19488a0b06b008d3e.png"></image>
+            </g>
+        </g>
+    </g>
+</svg>
