@@ -58,13 +58,16 @@ export function Header() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-inherit text-muted-foreground hover:text-foreground/80 transition-colors">
                   <Info className="h-5 w-5" />
                   <span className="sr-only">Hint</span>
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Got a classic gamer code up your sleeve?</p>
+                <div className="text-left">
+                  <p className="font-semibold">Konami Code:</p>
+                  <p>↑, ↑, ↓, ↓, ←, →, ←, →, B, A</p>
+                </div>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
