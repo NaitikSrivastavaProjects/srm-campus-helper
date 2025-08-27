@@ -14,10 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow p-4 sm:p-6 lg:p-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-headline tracking-tight">
-            CampusConnect
-          </h1>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground text-lg">
             Your modern university companion at SRMIST, KTR Campus.
           </p>
         </div>

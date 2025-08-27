@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button";
-import { Library, UtensilsCrossed, Users } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 
 export function SrmLogo() {
   return (
     <svg
-      className="h-10 w-10 text-primary"
+      className="h-8 w-8 text-primary"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 200 200"
       fill="none"
@@ -36,28 +34,19 @@ export function SrmLogo() {
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-3">
-          <SrmLogo />
-          <h1 className="text-3xl font-bold font-headline text-primary">
-            SRMIST
-          </h1>
+      <div className="container mx-auto flex h-16 items-center px-4">
+        <div className="flex-1 flex justify-start">
+            <h1 className="text-2xl font-bold font-headline text-primary">
+                CampusConnect
+            </h1>
         </div>
-        <div className="flex items-center gap-2">
-          <nav className="hidden md:flex items-center gap-2">
-            <Button variant="ghost">
-              <UtensilsCrossed className="mr-2 h-4 w-4" />
-              Canteens
-            </Button>
-            <Button variant="ghost">
-              <Library className="mr-2 h-4 w-4" />
-              Libraries
-            </Button>
-            <Button variant="ghost">
-              <Users className="mr-2 h-4 w-4" />
-              Clubs
-            </Button>
-          </nav>
+
+        <div className="flex-1 flex justify-center items-center gap-2">
+            <SrmLogo />
+            <span className="font-semibold text-lg">SRMIST</span>
+        </div>
+
+        <div className="flex-1 flex justify-end">
           <ModeToggle />
         </div>
       </div>
