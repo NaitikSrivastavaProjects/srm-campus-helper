@@ -45,7 +45,7 @@ export function Header() {
             </div>
         </div>
 
-        <nav className="flex-1 flex justify-center items-center gap-6">
+        <nav className="flex-1 flex justify-center items-center gap-12">
             <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <Utensils className="h-5 w-5" />
               <span className="font-medium">Canteens</span>
