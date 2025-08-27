@@ -33,7 +33,7 @@ export function InteractiveMapCard() {
                 alt={loc.name}
                 width={loc.name === 'Tech Park' ? 1024 : 400}
                 height={loc.name === 'Tech Park' ? 548 : 300}
-                className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                className="w-full h-36 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                 data-ai-hint={loc.hint}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
