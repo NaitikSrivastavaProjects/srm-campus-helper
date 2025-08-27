@@ -21,7 +21,7 @@ const announcements = [
   },
   {
     title: "Ganesh Chaturthi - 27 Aug 2025",
-    date: "Upcoming",
+    date: "1 day ago",
     content: "Puja to be held in the morning in Ganesh Mandir(front of UB). Fest to be held in the afternoon at Vendhar Square at 2:30pm. Students are requested to be present in traditional wear",
   },
 ];
