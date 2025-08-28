@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useToast } from "@/hooks/use-toast";
 
 const navLinks = [
@@ -67,22 +67,20 @@ export function Header() {
         </nav>
 
         <div className="flex-1 flex justify-end items-center gap-2">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-transparent hover:text-foreground/80 transition-colors">
-                  <Info className="h-5 w-5" />
-                  <span className="sr-only">Hint</span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-accent/50 hover:text-foreground/80 transition-colors">
+                <Info className="h-5 w-5" />
+                <span className="sr-only">Hint</span>
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent>
                 <div className="text-left">
                   <p className="font-semibold">Konami Code:</p>
                   <p>↑, ↑, ↓, ↓, ←, →, ←, →, B, A</p>
                 </div>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+            </PopoverContent>
+          </Popover>
 
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
