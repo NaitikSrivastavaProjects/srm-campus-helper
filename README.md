@@ -1,5 +1,10 @@
-# Firebase Studio
+# CampusConnect (SRM Helper)
 
-This is a NextJS starter in Firebase Studio.
+This is a project created for the Geeks for Geeks SRM recruitment task. It's a campus guide website.
 
-To get started, take a look at src/app/page.tsx.
+### Features
+- An interactive guide to key campus locations.
+- A dynamic weekly timetable.
+- A Konami Code easter egg!
+
+### Live Site
