@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { useToast } from "@/hooks/use-toast";
 
 const navLinks = [
   { label: "My Timetable", id: "timetable" },
@@ -19,12 +20,23 @@ const navLinks = [
 ];
 
 export function Header() {
-  const handleScroll = (e: React.MouseEvent<HTMLButtonElement | HTMLDivElement>, id: string) => {
+  const { toast } = useToast();
+
+  const handleScroll = (e: React.MouseEvent<HTMLDivElement | DropdownMenuItem>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+  };
+  
+  const handleWipClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Work-In-Progress",
+      description: "This feature is coming soon!",
+      duration: 3000,
+    });
   };
 
   return (
@@ -40,15 +52,15 @@ export function Header() {
         </div>
 
         <nav className="flex-1 flex justify-center items-center gap-12">
-            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" onClick={handleWipClick} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors wip-link">
               <Utensils className="h-5 w-5" />
               <span className="font-medium">Canteens</span>
             </a>
-            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" onClick={handleWipClick} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors wip-link">
               <Book className="h-5 w-5" />
               <span className="font-medium">Libraries</span>
             </a>
-            <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#" onClick={handleWipClick} className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors wip-link">
               <Users className="h-5 w-5" />
               <span className="font-medium">Clubs</span>
             </a>
@@ -58,7 +70,7 @@ export function Header() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-transparent hover:text-inherit text-muted-foreground hover:text-foreground/80 transition-colors">
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:bg-transparent hover:text-foreground/80 transition-colors">
                   <Info className="h-5 w-5" />
                   <span className="sr-only">Hint</span>
                 </Button>
