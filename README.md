@@ -1,6 +1,6 @@
 # CampusConnect (SRM Helper)
 
-This is a project created for the Geeks for Geeks SRM recruitment task. It's a campus guide website.
+A basic campus guide webpage for SRMIST Students.
 
 ### Features
 - An interactive guide to key campus locations.
@@ -8,3 +8,4 @@ This is a project created for the Geeks for Geeks SRM recruitment task. It's a c
 - A Konami Code easter egg!
 
 ### Live Site
+[Click here to view the webpage!](https://srm-campus-helper.vercel.app/)
